@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guía 1 · HTML & CSS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020; --card:#0f172a; --ink:#e5e7eb;
+      --muted:#94a3b8; --accent:#38bdf8; --accent2:#16a34a; --accent3:#facc15;
+      --border:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Roboto",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,.12), transparent),
+                  radial-gradient(1200px 600px at 110% 10%, rgba(250,204,21,.10), transparent),
+                  linear-gradient(180deg, #0b1020, #0a0f1d);
+      color:var(--ink);
+    }
+    header{padding:40px 16px; text-align:center}
+    h1{
+      font-family:"Bebas Neue", sans-serif;
+      letter-spacing:.5px;
+      margin:0;
+      font-size:clamp(28px,5vw,48px);
+    }
+    main{max-width:1100px; margin:28px auto 36px; padding:0 16px}
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    a.card{
+      display:block; text-decoration:none; color:inherit;
+      background:linear-gradient(180deg, var(--card), #0c1426);
+      border:1px solid var(--border);
+      border-radius:16px; padding:18px;
+      transition:.2s transform, .2s border-color, .2s box-shadow;
+      min-height:140px;
+    }
+    a.card:hover{ transform:translateY(-4px); border-color:var(--accent); box-shadow:0 10px 30px rgba(0,0,0,.25) }
+    .card h2{ margin:0 0 8px; font-size:20px }
+    .card p{ margin:0; color:var(--muted); line-height:1.5 }
+    .tag{ display:inline-block; margin-left:8px; border:1px solid #334155; color:#cbd5e1; border-radius:999px; font-size:12px; padding:2px 8px }
+    .series{ border-color:#7f1d1d }
+    .series:hover{ border-color:#e50914; box-shadow:0 10px 30px rgba(229,9,20,.25) }
+
+    /* ---------- Reto de IA ---------- */
+    .reto{ margin-top:48px; border-top:1px solid var(--border); padding-top:32px }
+    .reto-title{
+      font-family:"Bebas Neue", sans-serif; font-size:32px; letter-spacing:.5px;
+      color:var(--accent3); margin:0 0 10px;
+    }
+    .reto-intro{ color:var(--muted); line-height:1.55; margin:0 0 8px; max-width:72ch }
+    .reto-sitio{ color:var(--ink); margin:0 0 22px }
+    .reto-sitio a{ color:var(--accent) }
+    .reto-generico{ border-color:#475569 }
+    .reto-generico:hover{ border-color:#94a3b8; box-shadow:0 10px 30px rgba(0,0,0,.25) }
+    .reto-elaborado{ border-color:#3f6212 }
+    .reto-elaborado:hover{ border-color:var(--accent2); box-shadow:0 10px 30px rgba(22,163,74,.25) }
+    .ver{ display:inline-block; margin-top:12px; color:var(--accent); font-weight:600 }
+    .video-box{
+      margin-top:24px; background:linear-gradient(180deg, var(--card), #0c1426);
+      border:1px solid var(--border); border-radius:16px; padding:24px; text-align:center;
+    }
+    .video-box h3{ margin:0 0 8px; font-size:20px }
+    .video-nota{ color:var(--muted); margin:0 0 16px; line-height:1.5 }
+    .btn-video{
+      display:inline-block; text-decoration:none; background:var(--accent3); color:#1a1205;
+      font-weight:700; padding:12px 22px; border-radius:999px;
+    }
+    .reto-analisis{ margin-top:20px; text-align:center }
+    .reto-analisis a{ color:var(--accent3); font-weight:700; font-size:15px }
+    .reto-analisis a:hover{ text-decoration:underline }
+    .video-frame{ position:relative; max-width:760px; margin:18px auto 0; aspect-ratio:16/9; }
+    .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px; }
+    .video-alt{ margin-top:12px; font-size:13px; color:var(--muted) }
+    .video-alt a{ color:var(--accent3); font-weight:600 }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guía 1 — Introducción a HTML & CSS</h1>
+  </header>
+
+  <main>
+    <div class="grid">
+      <a class="card" href="estilos_embebidos.html">
+        <h2>Ejemplo 1 <span class="tag">Estilos embebidos</span></h2>
+        <p>Página con estilos definidos en atributos <code>style</code> dentro del HTML.</p>
+      </a>
+
+      <a class="card" href="ejemplo2.html">
+        <h2>Ejemplo 2 <span class="tag">&lt;style&gt; en &lt;head&gt;</span></h2>
+        <p>Reglas CSS internas aplicadas desde la cabecera del documento.</p>
+      </a>
+
+      <a class="card" href="paises.html">
+        <h2>Ejemplo 3 <span class="tag">CSS externo</span></h2>
+        <p>Reglas CSS definidas en archivos externos.</p>
+      </a>
+
+      <a class="card series" href="stranger-things.html">
+        <h2>Página de la serie <span class="tag">Stranger Things</span></h2>
+        <p>Stranger Things</p>
+      </a>
+    </div>
+
+    <section class="reto">
+      <h2 class="reto-title">Reto de Inteligencia Artificial</h2>
+      <p class="reto-intro">
+        Comparación de dos resultados generados por IA para el rediseño de la página de inicio,
+        según la cantidad de contexto entregado en el prompt.
+      </p>
+      <p class="reto-sitio">
+        Sitio seleccionado: <strong>AFP CONFIA</strong> &nbsp;·&nbsp;
+        <a href="https://www.confia.com.sv/" target="_blank" rel="noopener">Ver sitio original</a>
+      </p>
+
+      <div class="grid">
+        <a class="card reto-generico" href="reto-ia/resultado-generico/resultado-generico.html">
+          <h2>Prompt genérico <span class="tag">Poco contexto</span></h2>
+          <p>Resultado de un prompt simple, con muy poca información.</p>
+          <span class="ver">Ver resultado →</span>
+        </a>
+
+        <a class="card reto-elaborado" href="reto-ia/resultado-elaborado/resultado-elaborado.html">
+          <h2>Prompt elaborado <span class="tag">Contexto detallado</span></h2>
+          <p>Resultado final, con diagnóstico, identidad visual y referencias.</p>
+          <span class="ver">Ver resultado final →</span>
+        </a>
+      </div>
+
+      <p class="reto-analisis">
+        <a href="reto-ia/analisis.html">Ver análisis de correspondencia (código conocido vs. nuevo) →</a>
+      </p>
+
+      <div class="video-box">
+        <h3>Video explicativo</h3>
+        <p class="video-nota">Video que explica el reto, la comparación de prompts y el análisis (máx. 10 min).</p>
+        <div class="video-frame">
+          <iframe src="https://drive.google.com/file/d/1_HBQHen_jeeAvufKtZd1wbklpYylDB6f/preview" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <p class="video-alt">¿No carga el video? <a href="https://drive.google.com/file/d/1_HBQHen_jeeAvufKtZd1wbklpYylDB6f/view" target="_blank" rel="noopener">Ábrelo en Google Drive</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

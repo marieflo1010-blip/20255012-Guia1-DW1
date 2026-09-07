@@ -1,0 +1,156 @@
+body {
+  background-color: #111111;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+/* Encabezado */
+#encabezado {
+  background-color: #000000;
+  text-align: center;
+  padding: 30px;
+}
+
+#titulo-principal {
+  color: #e50914;
+  font-size: 52px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.subtitulo {
+  color: #cccccc;
+  font-size: 18px;
+  font-style: italic;
+  margin: 10px;
+}
+
+/* Menu */
+.menu {
+  margin: 15px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+}
+
+.primario {
+  background-color: #e50914;
+}
+
+/* Secciones */
+.seccion {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.tarjeta {
+  background-color: #1c1c1c;
+}
+
+.titulo-seccion {
+  color: #e50914;
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.texto {
+  color: #dddddd;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.resaltado {
+  color: #e50914;
+  font-weight: bold;
+}
+
+.portada {
+  display: block;
+  width: 450px;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+/* Personajes */
+.lista-personajes {
+  text-align: center;
+}
+
+.personaje {
+  display: inline-block;
+  width: 240px;
+  vertical-align: top;
+  background-color: #222222;
+  border: 1px solid #444444;
+  text-align: left;
+  padding: 0;
+  margin: 12px;
+}
+
+.nombre {
+  background-color: #e50914;
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  margin: 0;
+}
+
+.personaje .texto {
+  text-align: left;
+  padding: 15px;
+}
+
+.destacado {
+  border: 2px solid #e50914;
+}
+
+/* Temporadas */
+.lista {
+  color: #dddddd;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e50914;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  margin: 5px;
+}
+
+/* Dato destacado */
+#dato-destacado {
+  background-color: #e50914;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px;
+  margin: 15px;
+}
+
+/* Pie de pagina */
+.pie {
+  background-color: #000000;
+  color: #999999;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  padding: 20px;
+}

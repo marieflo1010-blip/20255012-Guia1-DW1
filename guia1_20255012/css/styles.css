@@ -1,0 +1,230 @@
+/* ESTILOS GENERALES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f9;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background-color: white;
+    padding: 30px 20px 20px 20px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    color: #2980b9;
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #3498db;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* INTRODUCCIÓN */
+
+.intro {
+    padding: 30px 20px;
+}
+
+.intro-text {
+    font-size: 1.2em;
+    color: #34495e;
+    text-align: center;
+
+    width: 80%;
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* SECCIÓN DE PAÍSES */
+
+.country-section {
+    font-family: 'Roboto', sans-serif;
+
+    width: 90%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* TARJETA DE CADA PAÍS */
+
+.country-section article {
+    background-color: white;
+
+    width: 100%;
+
+    margin: 0 auto 35px auto;
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+
+    text-align: center;
+}
+
+
+/* NOMBRE DEL PAÍS */
+
+.country-section h3 {
+    color: #e74c3c;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.8em;
+
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+
+/* IMÁGENES DE LOS PAÍSES */
+
+.country-image {
+    width: 100%;
+    max-width: 500px;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 20px auto;
+
+    border-radius: 8px;
+}
+
+
+/* PÁRRAFOS DE LOS PAÍSES */
+
+.country-section p {
+    font-size: 1em;
+
+    color: #2c3e50;
+
+    width: 90%;
+
+    margin: 0 auto 20px auto;
+
+    text-align: justify;
+}
+
+
+/* ENLACES */
+
+a {
+    display: inline-block;
+
+    color: #8e44ad;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+a:hover {
+    color: #9b59b6;
+
+    text-decoration: underline;
+}
+
+
+/* INFORMACIÓN ADICIONAL */
+
+.additional-info {
+    background-color: white;
+
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 50px auto 30px auto;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+}
+
+
+/* TABLA */
+
+.country-table {
+    width: 100%;
+
+    margin: 20px auto;
+
+    border-collapse: collapse;
+}
+
+.country-table th,
+.country-table td {
+    border: 1px solid #dddddd;
+
+    padding: 12px;
+
+    text-align: center;
+}
+
+.country-table th {
+    background-color: #3498db;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.country-table tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: white;
+
+    margin-top: 40px;
+
+    padding: 20px;
+
+    border-top: 1px solid #dddddd;
+}
+
+.footer-text {
+    font-size: 1.1em;
+
+    text-align: center;
+
+    margin: 0;
+
+    color: #7f8c8d;
+
+    font-family: 'Montserrat', sans-serif;
+}

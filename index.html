@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio · Desarrollo Web I</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b1020; --card:#0f172a; --ink:#e5e7eb;
+      --muted:#94a3b8; --accent:#38bdf8; --accent2:#16a34a; --accent3:#facc15;
+      --border:#1f2937;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:"Roboto",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,.12), transparent),
+                  radial-gradient(1200px 600px at 110% 10%, rgba(250,204,21,.10), transparent),
+                  linear-gradient(180deg, #0b1020, #0a0f1d);
+      color:var(--ink); min-height:100vh;
+    }
+    header{padding:56px 16px 20px; text-align:center}
+    .eyebrow{
+      font-size:13px; letter-spacing:.18em; text-transform:uppercase;
+      color:var(--accent3); font-weight:700; margin:0 0 10px;
+    }
+    h1{
+      font-family:"Bebas Neue", sans-serif; letter-spacing:.5px; margin:0;
+      font-size:clamp(32px,6vw,56px);
+    }
+    .intro{ color:var(--muted); max-width:60ch; margin:14px auto 0; line-height:1.55; padding:0 16px }
+    main{max-width:1000px; margin:28px auto 48px; padding:0 16px}
+    .grid{
+      display:grid; gap:18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    a.card, .card{
+      display:block; text-decoration:none; color:inherit;
+      background:linear-gradient(180deg, var(--card), #0c1426);
+      border:1px solid var(--border);
+      border-radius:16px; padding:22px;
+      transition:.2s transform, .2s border-color, .2s box-shadow;
+      min-height:150px;
+    }
+    a.card:hover{ transform:translateY(-4px); border-color:var(--accent); box-shadow:0 10px 30px rgba(0,0,0,.25) }
+    .card .num{
+      font-family:"Bebas Neue", sans-serif; font-size:30px; color:var(--accent);
+      line-height:1; margin-bottom:8px;
+    }
+    .card h2{ margin:0 0 8px; font-size:20px }
+    .card p{ margin:0; color:var(--muted); line-height:1.5; font-size:14.5px }
+    .tag{
+      display:inline-block; margin-top:14px; border:1px solid #334155; color:#cbd5e1;
+      border-radius:999px; font-size:12px; padding:3px 10px;
+    }
+    .activa .num{ color:var(--accent3) }
+    .activa:hover{ border-color:var(--accent3); box-shadow:0 10px 30px rgba(250,204,21,.18) }
+    .activa .tag{ border-color:#3f6212; color:#a3e635 }
+    .proximamente{ opacity:.55; cursor:not-allowed }
+    .proximamente .num{ color:#475569 }
+    .proximamente .tag{ border-color:#334155; color:#94a3b8 }
+    footer{ text-align:center; color:var(--muted); font-size:13px; padding:10px 16px 40px }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">Portafolio</p>
+    <h1>Desarrollo Web I</h1>
+  </header>
+
+  <main>
+    <div class="grid">
+      <a class="card activa" href="guia1_20255012/index.html">
+        <div class="num">01</div>
+        <h2>Guía 1</h2>
+        <p>Introducción a HTML y CSS: estilos embebidos, &lt;style&gt;, CSS externo, página de Stranger Things y el Reto de IA.</p>
+        <span class="tag">Disponible</span>
+      </a>
+
+      <div class="card proximamente">
+        <div class="num">02</div>
+        <h2>Guía 2</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+
+      <div class="card proximamente">
+        <div class="num">03</div>
+        <h2>Guía 3</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+
+      <div class="card proximamente">
+        <div class="num">04</div>
+        <h2>Guía 4</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+
+      <div class="card proximamente">
+        <div class="num">05</div>
+        <h2>Guía 5</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+
+      <div class="card proximamente">
+        <div class="num">06</div>
+        <h2>Guía 6</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+
+      <div class="card proximamente">
+        <div class="num">07</div>
+        <h2>Guía 7</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+
+      <div class="card proximamente">
+        <div class="num">08</div>
+        <h2>Guía 8</h2>
+        <span class="tag">Próximamente</span>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

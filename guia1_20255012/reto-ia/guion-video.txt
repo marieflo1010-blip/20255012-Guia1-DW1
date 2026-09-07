@@ -1,0 +1,203 @@
+========================================================
+GUION DEL VIDEO - RETO DE INTELIGENCIA ARTIFICIAL
+Sitio: AFP CONFIA (https://www.confia.com.sv/)
+Duracion objetivo: maximo 10 minutos
+========================================================
+
+COMO USAR ESTE GUION:
+- "EN PANTALLA" = lo que tenes que mostrar/grabar.
+- "DECIS" = la narracion (adaptala a tu forma de hablar).
+- Donde diga [LEE TU PROMPT] o [TU DIAGNOSTICO], usa TU texto real, no inventes.
+- Ensaya una vez con cronometro para no pasarte de 10 min.
+
+
+--------------------------------------------------------
+1) INTRODUCCION Y SITIO ELEGIDO            (0:00 - 1:00)
+--------------------------------------------------------
+EN PANTALLA:
+   Tu cara (opcional) o el index.html de la Guia 1 abierto,
+   mostrando la seccion "Reto de Inteligencia Artificial".
+
+DECIS:
+   "Hola, soy [tu nombre]. Este es el Reto de Inteligencia
+   Artificial de la Guia 1 de Desarrollo Web I. El objetivo
+   es demostrar que la calidad del resultado que genera una
+   IA depende directamente de la cantidad y precision del
+   contexto que le damos en el prompt. Para probarlo eleji un
+   sitio salvadoreno real: AFP CONFIA, la Administradora de
+   Fondos de Pensiones. Voy a comparar dos redisenos de su
+   pagina de inicio: uno con un prompt generico, con poco
+   contexto, y otro con un prompt bien elaborado, con bastante
+   contexto."
+
+
+--------------------------------------------------------
+2) PAGINA ORIGINAL Y PROBLEMAS             (1:00 - 2:00)
+--------------------------------------------------------
+EN PANTALLA:
+   El sitio real https://www.confia.com.sv/ en el navegador.
+   Hace scroll lento por la pagina de inicio mientras hablas.
+
+DECIS:
+   "Esta es la pagina de inicio original de CONFIA. Es
+   funcional y tiene mucha informacion, pero al analizarla
+   detecte algunos puntos a mejorar: [TU DIAGNOSTICO - deci
+   los 2 o 3 problemas que realmente viste]."
+
+   PROBLEMAS QUE PODES USAR (solo si de verdad aplican):
+   - Jerarquia visual: muchos elementos compiten por atencion
+     y no queda claro que es lo mas importante.
+   - Llamadas a la accion: los botones principales (afiliarse,
+     simular pension) no resaltan lo suficiente.
+   - Organizacion de la informacion: el contenido se siente
+     disperso, sin agrupar por tipo de usuario o por tramite.
+
+
+--------------------------------------------------------
+3) CONTEXTO RECOPILADO                      (2:00 - 3:00)
+--------------------------------------------------------
+EN PANTALLA:
+   Tus notas de contexto. Si no las tenes, mostra otra vez el
+   sitio de CONFIA senalando colores, logo y secciones.
+
+DECIS:
+   "Antes de escribir el prompt bueno reuni contexto sobre el
+   sitio: la IDENTIDAD (una AFP salvadorena; sus usuarios son
+   afiliados, personas por pensionarse y empresas); la
+   IDENTIDAD VISUAL (el rojo institucional, tonos neutros y
+   una tipografia sobria); el CONTENIDO QUE HABIA QUE
+   CONSERVAR (ahorro e inversion, pension, fondos voluntarios
+   y los tramites); los PROBLEMAS que ya mencione; y una
+   REFERENCIA VISUAL de sitios financieros modernos. Todo esto
+   es lo que marca la diferencia en el segundo prompt."
+
+
+--------------------------------------------------------
+4) PROMPT GENERICO Y SU RESULTADO           (3:00 - 4:00)
+--------------------------------------------------------
+EN PANTALLA:
+   Primero el TEXTO del prompt generico (leelo en pantalla).
+   Luego abri el resultado:
+   reto-ia/resultado-generico/resultado-generico.html
+   y hace scroll.
+
+DECIS:
+   "Empece con el prompt generico, a proposito con muy poco
+   contexto. Decia algo asi: [LEE TU PROMPT GENERICO] - por
+   ejemplo: 'Mejora la pagina de inicio de este sitio web y
+   crea una version mas atractiva usando HTML y CSS'. Sin
+   colores, sin identidad, sin los problemas especificos. Y
+   este es el resultado. Se ve ordenado y correcto, pero
+   GENERICO: fondo claro plano, poca personalidad, no
+   transmite que sea CONFIA. Cumple, pero podria ser de
+   cualquier empresa."
+
+
+--------------------------------------------------------
+5) PROMPT ELABORADO Y SU RESULTADO          (4:00 - 6:00)
+--------------------------------------------------------
+EN PANTALLA:
+   El TEXTO del prompt elaborado (mostralo y lee las partes
+   clave). Luego abri el resultado final:
+   reto-ia/resultado-elaborado/resultado-elaborado.html
+   y recorrelo con calma de arriba a abajo.
+
+DECIS:
+   "Despues escribi el prompt elaborado. Aqui si le di todo el
+   contexto: [LEE TU PROMPT ELABORADO o resumi sus partes] -
+   el nombre y la URL del sitio, su objetivo, los usuarios, el
+   diagnostico con los problemas, la identidad visual y los
+   colores, el contenido a conservar, las prioridades, una
+   referencia visual y las restricciones tecnicas.
+
+   Y miren el resultado final. Fijense en el HERO OSCURO con
+   una tarjeta tipo simulador de pension, que le da un aire
+   premium; en la JERARQUIA CLARA, con un titulo grande y
+   botones que resaltan; y en como la informacion quedo
+   AGRUPADA: accesos rapidos, opciones por tipo de usuario,
+   servicios, fondos voluntarios, novedades e indicadores.
+   Usa el rojo de la marca con un dorado de acento y sombras
+   suaves. Este redisen si se siente como un sitio corporativo
+   real y resuelve los problemas que habia detectado."
+
+
+--------------------------------------------------------
+6) COMPARACION: ORIGINAL VS RESULTADO FINAL (6:00 - 7:30)
+--------------------------------------------------------
+EN PANTALLA:
+   Dos pestanas y alterna: primero ORIGINAL vs ELABORADO,
+   luego GENERICO vs ELABORADO. Si podes, lado a lado.
+
+DECIS:
+   "Comparemos. Frente a la pagina original, el redisen ORDENA
+   LA JERARQUIA, AGRUPA LA INFORMACION y hace OBVIAS LAS
+   ACCIONES principales. Y ahora lo mas importante del reto:
+   comparemos los dos redisenos entre si. El generico se ve
+   plano y sin identidad; el elaborado tiene profundidad,
+   marca y una estructura pensada. Y ojo: FUE LA MISMA IA en
+   los dos casos. Lo unico que cambio fue el contexto del
+   prompt. Ese es el punto del reto."
+
+
+--------------------------------------------------------
+7) CODIGO CONOCIDO VS CONTENIDO NUEVO       (7:30 - 9:00)
+--------------------------------------------------------
+EN PANTALLA:
+   Abri reto-ia/analisis.html y recorre la tabla de dos
+   columnas. Tambien podes abrir el codigo del resultado
+   elaborado y senalar una o dos propiedades nuevas en vivo.
+
+DECIS:
+   "Por ultimo, analice el codigo del resultado final y
+   clasifique sus elementos en dos columnas: lo que YA VIMOS
+   en el curso y lo que es NUEVO.
+
+   De lo ya estudiado estan la estructura HTML, las listas,
+   los selectores de etiqueta, de clase y de id, el selector
+   descendente, y propiedades como color, background-color,
+   las de fuente y texto, margin y padding.
+
+   Y de lo nuevo, con su funcion: display:flex y display:grid
+   para maquetar en filas y columnas; gap para separar;
+   position:sticky para dejar el menu fijo al hacer scroll;
+   box-shadow y border-radius para las tarjetas; transition y
+   transform para las animaciones suaves; los degradados y el
+   backdrop-filter para el efecto de vidrio; las variables CSS
+   con :root y var(); y @media para que sea responsivo. Cada
+   elemento nuevo esta explicado en la tabla."
+
+
+--------------------------------------------------------
+8) CONCLUSION                                (9:00 - 10:00)
+--------------------------------------------------------
+EN PANTALLA:
+   Volve al index.html de la Guia 1 mostrando la seccion del
+   Reto IA completa, o tu cara para cerrar.
+
+DECIS:
+   "En conclusion: la misma herramienta de IA produjo dos
+   resultados muy distintos, y la diferencia fue el CONTEXTO.
+   Con poco contexto obtuve algo generico; con un prompt
+   detallado obtuve un redisen profesional, alineado a la
+   marca CONFIA y que resuelve problemas reales de la pagina
+   original. Esto demuestra que saber dar contexto es una
+   habilidad clave para trabajar con inteligencia artificial.
+   Muchas gracias por ver el video."
+
+
+========================================================
+CONSEJOS PARA GRABAR
+========================================================
+- Graba la pantalla con audio (OBS Studio, o Xbox Game Bar
+  con Win + G).
+- Tene las pestanas ya abiertas ANTES de grabar: el sitio
+  real de CONFIA, el resultado generico, el elaborado y
+  analisis.html. Asi no perdes tiempo buscando.
+- Habla pausado y hace scroll despacio; que se alcance a leer.
+- Para comparar, usa Alt + Tab o pestanas para alternar
+  rapido entre el generico y el elaborado.
+- Ensaya una vez con cronometro: si te pasas de 10 min,
+  recorta las partes 3 y 5.
+- Al subir a YouTube, pasa el enlace y lo incrusto en el
+  index de la Guia.
+========================================================
