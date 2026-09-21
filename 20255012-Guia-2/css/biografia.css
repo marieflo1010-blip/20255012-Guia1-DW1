@@ -1,0 +1,1077 @@
+/* ==================================================
+   VARIABLES
+================================================== */
+
+:root {
+    --fondo: #f7f3ee;
+    --fondo-secundario: #eee5dc;
+
+    --texto: #221b18;
+    --texto-suave: #746863;
+
+    --rosa: #bd777a;
+    --rosa-claro: #e8c7c4;
+    --vino: #743f46;
+
+    --blanco: #ffffff;
+
+    --borde: rgba(34, 27, 24, 0.12);
+
+    --fuente-titulo: "Playfair Display", Georgia, serif;
+    --fuente-texto: "DM Sans", Arial, sans-serif;
+}
+
+
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--fondo);
+
+    color: var(--texto);
+
+    font-family: var(--fuente-texto);
+
+    line-height: 1.6;
+}
+
+
+img {
+    display: block;
+
+    max-width: 100%;
+}
+
+
+/* ==================================================
+   NAVEGACIÓN
+================================================== */
+
+.menu {
+    width: 100%;
+    min-height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgba(247, 243, 238, 0.95);
+
+    border-bottom: 1px solid var(--borde);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.logo {
+    color: var(--vino);
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 1.8rem;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+/* Selector de hijos */
+
+.menu-enlaces > a {
+    color: var(--texto-suave);
+
+    margin-left: 30px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+
+.menu-enlaces > a:hover {
+    color: var(--rosa);
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+    width: 86%;
+
+    max-width: 1250px;
+
+    min-height: 85vh;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    padding: 90px 0;
+}
+
+
+.hero-texto {
+    max-width: 680px;
+}
+
+
+.etiqueta {
+    display: inline-block;
+
+    color: var(--vino);
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    border: 1px solid var(--rosa);
+
+    border-radius: 30px;
+
+    padding: 7px 17px;
+
+    margin-bottom: 25px;
+}
+
+
+.saludo {
+    color: var(--texto-suave);
+
+    font-size: 1rem;
+
+    margin-bottom: 3px;
+}
+
+
+h1 {
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(3.5rem, 7vw, 6.3rem);
+
+    line-height: 0.95;
+
+    margin-bottom: 30px;
+}
+
+
+/* Selector de hijos */
+
+h1 > span {
+    display: block;
+
+    color: var(--rosa);
+
+    font-style: italic;
+
+    font-weight: 600;
+}
+
+
+.descripcion-principal {
+    max-width: 580px;
+
+    color: var(--texto-suave);
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* ==================================================
+   DATOS DEL HERO
+================================================== */
+
+.hero-datos {
+    display: flex;
+
+    margin-bottom: 40px;
+}
+
+
+.dato {
+    padding-right: 28px;
+}
+
+
+/* Selector adyacente */
+
+.dato + .dato {
+    padding-left: 28px;
+
+    border-left: 1px solid var(--borde);
+}
+
+
+.dato strong {
+    display: block;
+
+    color: var(--vino);
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+}
+
+
+.dato span {
+    color: var(--texto-suave);
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==================================================
+   BOTÓN PRINCIPAL
+================================================== */
+
+.boton-principal {
+    display: inline-block;
+
+    color: var(--blanco);
+
+    background-color: var(--vino);
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.boton-principal:hover {
+    background-color: var(--rosa);
+
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   FOTO PRINCIPAL
+================================================== */
+
+.hero-imagen {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.marco-foto {
+    width: 390px;
+
+    height: 520px;
+
+    overflow: hidden;
+
+    border-radius: 190px 190px 25px 25px;
+
+    box-shadow:
+        0 30px 60px rgba(92, 56, 57, 0.20);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.marco-foto img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.foto-perfil {
+    object-position: center;
+}
+
+
+.decoracion {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+
+.decoracion-1 {
+    width: 180px;
+
+    height: 180px;
+
+    background-color: var(--rosa-claro);
+
+    right: -5%;
+
+    top: 8%;
+}
+
+
+.decoracion-2 {
+    width: 110px;
+
+    height: 110px;
+
+    border: 2px solid var(--rosa);
+
+    left: 5%;
+
+    bottom: 2%;
+}
+
+
+/* ==================================================
+   SECCIONES GENERALES
+================================================== */
+
+.seccion {
+    width: 86%;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 110px 0;
+}
+
+
+.titulo-seccion {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 55px;
+}
+
+
+.titulo-seccion > span {
+    color: var(--rosa);
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    margin-top: 8px;
+}
+
+
+.titulo-seccion p {
+    color: var(--texto-suave);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 4px;
+}
+
+
+.titulo-seccion h2 {
+    font-family: var(--fuente-titulo);
+
+    font-size: 3rem;
+
+    line-height: 1;
+}
+
+
+/* ==================================================
+   SOBRE MÍ
+================================================== */
+
+.sobre-mi {
+    border-top: 1px solid var(--borde);
+}
+
+
+.sobre-grid {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 100px;
+}
+
+
+.texto-grande p {
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+
+    line-height: 1.4;
+}
+
+
+.texto-grande strong {
+    color: var(--vino);
+}
+
+
+.texto-secundario p {
+    color: var(--texto-suave);
+
+    margin-bottom: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* Pseudo-clase first-child */
+
+.texto-secundario p:first-child {
+    border-left: 3px solid var(--rosa);
+
+    padding-left: 20px;
+}
+
+
+/* Pseudo-elemento primera letra */
+
+.texto-grande p::first-letter {
+    color: var(--rosa);
+
+    font-size: 3.5rem;
+
+    font-family: var(--fuente-titulo);
+}
+
+
+/* ==================================================
+   HISTORIA
+================================================== */
+
+.historia {
+    width: 100%;
+
+    max-width: none;
+
+    background-color: var(--fondo-secundario);
+
+    padding-left: 7%;
+
+    padding-right: 7%;
+}
+
+
+.historia .titulo-seccion,
+.linea-tiempo {
+    max-width: 1150px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+
+.evento {
+    display: grid;
+
+    grid-template-columns: 100px 1fr;
+
+    gap: 45px;
+
+    padding: 45px 0;
+
+    border-top: 1px solid var(--borde);
+}
+
+
+.evento:last-child {
+    border-bottom: 1px solid var(--borde);
+}
+
+
+.numero-evento {
+    color: var(--rosa);
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+}
+
+
+.evento-etiqueta {
+    color: var(--rosa);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+.evento h3 {
+    font-family: var(--fuente-titulo);
+
+    font-size: 2rem;
+
+    margin-bottom: 15px;
+}
+
+
+.evento div > p:not(.evento-etiqueta) {
+    color: var(--texto-suave);
+
+    max-width: 750px;
+
+    margin-bottom: 13px;
+}
+
+
+/* Selector de atributo */
+
+a[href^="https"] {
+    transition: color 0.3s ease;
+}
+
+
+.enlace-esen {
+    display: inline-block;
+
+    color: var(--vino);
+
+    margin-top: 10px;
+
+    font-weight: 700;
+}
+
+
+.enlace-esen:hover {
+    color: var(--rosa);
+}
+
+
+/* ==================================================
+   TARJETAS DE VIDA PERSONAL
+================================================== */
+
+.tarjetas-vida {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.tarjeta {
+    min-height: 500px;
+
+    overflow: hidden;
+
+    background-color: var(--blanco);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 22px;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 50px rgba(70, 45, 45, 0.15);
+}
+
+
+/* Las imágenes son hijas directas de las tarjetas */
+
+.tarjeta > img {
+    width: 100%;
+
+    height: 290px;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.tarjeta:hover > img {
+    transform: scale(1.05);
+}
+
+
+/* Ajustes individuales para cada foto */
+
+.foto-maquillaje {
+    object-position: center;
+}
+
+
+.foto-familia {
+    object-position: center;
+}
+
+
+.foto-nala {
+    object-position: center;
+}
+
+
+.tarjeta-contenido {
+    padding: 27px;
+}
+
+
+.numero-tarjeta {
+    color: var(--rosa);
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.tarjeta h3 {
+    color: var(--vino);
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 1.8rem;
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+}
+
+
+.tarjeta-contenido p:last-child {
+    color: var(--texto-suave);
+
+    line-height: 1.7;
+}
+
+
+/* Primera tarjeta */
+
+.tarjeta:first-child {
+    border-top: 4px solid var(--rosa);
+}
+
+
+/* Segunda tarjeta */
+
+.tarjeta:nth-child(2) {
+    border-top: 4px solid var(--rosa-claro);
+}
+
+
+/* Tercera tarjeta */
+
+.tarjeta:nth-child(3) {
+    border-top: 4px solid var(--vino);
+}
+
+
+/* ==================================================
+   CUALIDADES
+================================================== */
+
+.cualidades {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+    border-top: 1px solid var(--borde);
+}
+
+
+.mensaje-central {
+    position: relative;
+}
+
+
+.comillas {
+    color: var(--rosa-claro);
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 9rem;
+
+    line-height: 0;
+
+    position: absolute;
+
+    top: 0;
+
+    left: -25px;
+}
+
+
+.mensaje-central p {
+    position: relative;
+
+    font-family: var(--fuente-titulo);
+
+    font-size: 2.3rem;
+
+    line-height: 1.4;
+
+    z-index: 2;
+}
+
+
+.lista-cualidades > div {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--borde);
+}
+
+
+.lista-cualidades > div:first-child {
+    border-top: 1px solid var(--borde);
+}
+
+
+.lista-cualidades span {
+    color: var(--rosa);
+
+    font-size: 0.75rem;
+}
+
+
+.lista-cualidades p {
+    font-weight: 600;
+}
+
+
+/* ==================================================
+   FUTURO
+================================================== */
+
+.futuro {
+    width: 100%;
+
+    max-width: none;
+
+    background-color: var(--vino);
+
+    color: var(--blanco);
+
+    padding: 120px 7%;
+}
+
+
+.futuro-contenido {
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+.futuro .etiqueta {
+    color: var(--rosa-claro);
+
+    border-color: var(--rosa-claro);
+}
+
+
+.futuro h2 {
+    font-family: var(--fuente-titulo);
+
+    font-size: clamp(3rem, 7vw, 5.8rem);
+
+    line-height: 1;
+
+    margin-bottom: 35px;
+}
+
+
+.futuro h2 > span {
+    display: block;
+
+    color: var(--rosa-claro);
+
+    font-style: italic;
+}
+
+
+.futuro p {
+    max-width: 720px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+.volver-arriba {
+    color: var(--blanco);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid var(--rosa-claro);
+
+    padding-bottom: 4px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    background-color: #2b181b;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    padding: 35px 7%;
+
+    font-size: 0.75rem;
+}
+
+
+footer strong {
+    color: var(--blanco);
+}
+
+
+/* ==================================================
+   RESPONSIVE - TABLET
+================================================== */
+
+@media (max-width: 900px) {
+
+    .menu-enlaces {
+        display: none;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+
+    .hero-texto {
+        margin: 0 auto;
+    }
+
+
+    .descripcion-principal {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-datos {
+        justify-content: center;
+    }
+
+
+    .hero-imagen {
+        order: -1;
+    }
+
+
+    .marco-foto {
+        width: 300px;
+
+        height: 400px;
+    }
+
+
+    .sobre-grid,
+    .cualidades {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .tarjetas-vida {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tarjeta {
+        min-height: auto;
+    }
+
+
+    .tarjeta > img {
+        height: 400px;
+    }
+
+
+    .evento {
+        grid-template-columns: 60px 1fr;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* ==================================================
+   RESPONSIVE - CELULAR
+================================================== */
+
+@media (max-width: 550px) {
+
+    .hero {
+        width: 90%;
+
+        padding-top: 50px;
+    }
+
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+
+    .hero-datos {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .dato {
+        padding: 0;
+    }
+
+
+    .dato + .dato {
+        border-left: none;
+
+        border-top: 1px solid var(--borde);
+
+        padding: 15px 0 0;
+    }
+
+
+    .seccion {
+        width: 90%;
+
+        padding: 80px 0;
+    }
+
+
+    .titulo-seccion h2 {
+        font-size: 2.4rem;
+    }
+
+
+    .texto-grande p {
+        font-size: 1.6rem;
+    }
+
+
+    .evento {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .tarjeta > img {
+        height: 300px;
+    }
+
+}

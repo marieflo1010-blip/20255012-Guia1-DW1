@@ -1,0 +1,83 @@
+Quiero rediseñar y ampliar un sitio web salvadoreño de AFP CONFIA que trabajé anteriormente.
+
+Necesito crear 3 páginas web utilizando únicamente HTML5 y CSS3:
+
+1. index.html — página principal de CONFIA.
+2. ahorro.html — página sobre ahorro voluntario e inversión.
+3. contacto.html — página de contacto y atención al cliente.
+
+Las tres páginas deben estar conectadas mediante una navegación funcional y deben mantener exactamente el mismo sistema visual.
+
+Para el diseño quiero utilizar como referencia el siguiente sistema obtenido de Refero (design.md):
+
+- Color principal verde oscuro / Forest Ink: #163300
+- Color de acento verde lima / Lime Voltage: #9fe870
+- Verde secundario / Spruce: #054d28
+- Verde claro / Linen Mist: #e2f6d5
+- Fondo gris claro / Fog: #e8ebe6
+- Texto principal: #454745
+- Texto oscuro: #0e0f0c
+- Fondo principal: #ffffff
+
+Tipografía:
+- Utilizar Inter desde Google Fonts.
+- Los títulos principales deben utilizar peso 900.
+- Los títulos deben ser grandes, modernos y con poco espacio entre letras.
+
+Estilo general:
+- Diseño limpio, moderno y relacionado con servicios financieros.
+- Mucho espacio en blanco.
+- Contenedor principal con un ancho máximo aproximado de 1200px.
+- Botones completamente redondeados tipo píldora.
+- Tarjetas con esquinas redondeadas.
+- Alternar secciones blancas, verde claro y verde oscuro.
+- Utilizar el verde lima solamente como color de acento.
+- Evitar gradientes y sombras excesivas.
+- Mantener una apariencia minimalista y profesional.
+
+Página principal:
+- Presentar a CONFIA.
+- Incluir información relacionada con ahorro, pensión y planificación.
+- Crear un hero llamativo.
+- Agregar accesos rápidos o tarjetas.
+- Incluir llamados a la acción.
+- Agregar footer.
+
+Página de ahorro:
+- Explicar de manera sencilla el ahorro voluntario.
+- Mostrar posibles objetivos de ahorro.
+- Presentar beneficios o pasos para comenzar.
+- Agregar llamados a la acción hacia la página de contacto.
+
+Página de contacto:
+- Incluir diferentes opciones o canales de atención.
+- Crear un formulario con:
+  nombre,
+  correo electrónico,
+  teléfono,
+  motivo de consulta
+  y mensaje.
+- Indicar claramente que se trata de un formulario académico que no envía información real.
+
+No inventar tasas de interés, cifras financieras, beneficios legales, regulaciones ni datos específicos que no hayan sido proporcionados.
+
+También necesito:
+
+- Diseño responsive para computadora, tablet y celular.
+- HTML semántico.
+- Un solo archivo CSS externo compartido llamado reto.css.
+- Animaciones y transiciones realizadas únicamente con CSS.
+- Animaciones hover en botones y tarjetas.
+- Una animación de entrada para el hero.
+
+Quiero que la duración de la animación del hero esté definida mediante una variable CSS para poder modificarla fácilmente durante una demostración.
+
+Por ejemplo:
+
+--duracion-animacion-hero: 1.1s;
+
+La animación debe utilizar esa variable para que posteriormente pueda cambiarla de 1.1 segundos a 3 segundos y demostrar visualmente la diferencia.
+
+No copies el contenido, logotipo ni textos de Wise. El design.md debe utilizarse únicamente como referencia para el sistema visual.
+
+Genera un diseño original adaptado a CONFIA y mantén consistencia entre las tres páginas.

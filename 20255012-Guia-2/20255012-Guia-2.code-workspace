@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/imagenpelicula"
+		},
+		{
+			"path": "../imagenesbio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "20255012-Guia-2"
+	}
+}
