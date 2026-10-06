@@ -1,0 +1,9 @@
+el prompt: Crea una nueva versión de la página de inicio de un sitio web de AFP CONFIA de El Salvador, enfocado en informar a los usuarios sobre ahorro, pensión e inversión.
+
+Mantén como contenido principal el mensaje “Tu futuro empieza hoy”, información sobre ahorro, pensión e inversión, llamados a la acción y una navegación con Inicio, Ahorro e inversión y Contacto.
+
+Conserva una identidad visual profesional y moderna similar al sitio anterior, utilizando principalmente tonos verdes, fondos claros, tarjetas, botones redondeados y un diseño limpio.
+
+Utiliza obligatoriamente CSS Grid para construir la distribución principal de la página. CSS Grid no debe utilizarse solamente en las tarjetas o en una sección aislada, sino que debe formar parte de la maquetación general. Puedes utilizar Flexbox para elementos específicos como el menú de navegación o botones.
+
+El diseño debe adaptarse a diferentes tamaños de pantalla. Genera el código HTML y CSS por separado y utiliza únicamente HTML y CSS, sin JavaScript.

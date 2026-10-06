@@ -1,0 +1,353 @@
+/* =========================================================
+   EJEMPLO 1 · MARAVILLAS DEL MUNDO
+   Hoja de estilos final (resultado de los pasos 3 al 41).
+   Los experimentos temporales de los pasos 16, 27-32 y 35-37
+   ya están resueltos: aquí solo queda el estado final.
+   Las líneas marcadas con "EXTRA" no vienen en la guía.
+   ========================================================= */
+
+/* Paso 3 · Paleta de colores con variables */
+:root {
+  --color-texto: #342e29;
+  --color-fondo: #f5efe6;
+  --color-principal: #293e36;
+  --color-acento: #93472f;
+  --color-superficie: #ffffff;
+  --color-contraste: #ead1ad;
+  --color-borde: #ded3c4;
+  --color-fondo-secundario: #eadfce;
+  --color-capa-inicial: rgba(25, 35, 29, 0.85);
+  --color-capa-final: rgba(25, 35, 29, 0.65);
+  --color-sombra: rgba(52, 46, 41, 0.10);
+}
+
+/* Paso 42g · EXTRA: el encabezado es sticky y mide ~4rem, así que se deja
+   un colchón al saltar a un ancla (#maravillas, #historia, #creditos)
+   para que el destino no quede tapado debajo del encabezado. */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Paso 4 · body */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+/* Paso 5 · Contenedor centrado (90 % del ancho, máximo 1140px) */
+.contenedor {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Paso 6 · Las imágenes nunca son más anchas que su contenedor */
+img {
+  max-width: 100%;
+}
+
+/* Paso 7 · Estilos de texto */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h2,
+h3 {
+  color: var(--color-principal);
+}
+
+a {
+  color: var(--color-acento);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-principal);
+}
+
+/* Paso 13c · .sobretitulo (se usa en presentación, galería e historia) */
+.sobretitulo {
+  margin: 0 0 0.5rem;           /* EXTRA: lo pega al título que le sigue */
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-acento);
+}
+
+/* ---------- Encabezado y menú ---------- */
+
+/* Paso 8 · Colores del encabezado */
+.encabezado-principal {
+  color: var(--color-superficie);
+  background-color: var(--color-principal);
+
+  /* Pasos 35-37 · Encabezado adherente: se queda pegado arriba al hacer scroll.
+     sticky solo funciona si se indica el punto de adhesión (top: 0).
+     z-index: 10 > z-index: 1 de .continente, para que las etiquetas
+     pasen POR DEBAJO del encabezado y no por encima. */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.marca {
+  color: var(--color-superficie);
+  font-size: 1.15rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* EXTRA: sin esta regla, a:hover (más específica que .marca) pintaría la
+   marca del mismo color que el fondo del encabezado y desaparecería. */
+.marca:hover,
+.marca:focus-visible {
+  color: var(--color-contraste);
+}
+
+/* Paso 9 · Barra con Flexbox */
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;   /* marca y navegación en extremos opuestos */
+  align-items: center;              /* centradas en el eje transversal */
+  flex-wrap: wrap;                  /* permite salto de línea */
+  gap: 0.75rem 2rem;                /* filas 0.75rem · columnas 2rem */
+  padding: 1rem 0;                  /* relleno vertical */
+}
+
+/* Paso 10 · Menú */
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+  color: var(--color-contraste);
+}
+
+/* ---------- Presentación principal ---------- */
+
+/* Pasos 11-12 · Foto de fondo con capa de contraste.
+   La primera capa (el degradado) se dibuja sobre la segunda (la foto). */
+.presentacion {
+  padding: 4rem 0;
+  color: var(--color-superficie);
+  background-color: var(--color-principal);
+  background-image:
+    linear-gradient(
+      to right,
+      var(--color-capa-inicial),
+      var(--color-capa-final)
+    ),
+    url("../images/gran-muralla-china.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Paso 13 · Contenido de la presentación */
+.presentacion h1 {
+  max-width: 760px;
+  margin: 0 0 1rem;                 /* margen inferior 1rem (superior en 0: EXTRA) */
+  font-size: 2.5rem;
+}
+
+.presentacion p {
+  max-width: 640px;
+}
+
+.presentacion .sobretitulo {
+  color: var(--color-contraste);    /* 13d: gana a .sobretitulo por mayor especificidad */
+}
+
+/* Paso 14 · Botón principal */
+.boton-principal {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  color: #ffffff;
+  background-color: var(--color-acento);
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+.boton-principal:hover,
+.boton-principal:focus-visible {
+  color: var(--color-principal);
+  background-color: var(--color-contraste);
+}
+
+/* ---------- Galería ---------- */
+
+/* Paso 15 · Sección y título */
+.seccion-maravillas {
+  padding: 3rem 0;
+}
+
+.titulo-seccion {
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+.titulo-seccion h2 {
+  margin: 0 0 0.75rem;
+  font-size: 2rem;
+}
+
+/* Pasos 16-20 · Contenedor flexible de las tarjetas
+   16: display:flex          (todas en una sola fila, se aprietan)
+   17: flex-wrap: wrap       (pasan a varias filas)
+   19: gap                   (separación entre tarjetas, sin tocar los bordes)
+   20: justify-content       (centra la última fila si queda incompleta) */
+.maravillas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Paso 18 · Tamaño flexible: crece, se reduce y parte de 300px
+   Paso 20 · max-width: 360px evita que la última tarjeta se estire de más */
+.maravilla {
+  flex: 1 1 300px;
+  max-width: 360px;
+
+  /* Paso 21 · Superficie de la tarjeta */
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px var(--color-sombra);
+
+  /* Paso 22 · Recorta lo que sobresale: la foto respeta las esquinas redondeadas */
+  overflow: hidden;
+
+  /* Paso 26 · Tarjeta como columna flexible */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pasos 23-24 · Fotografías uniformes.
+   object-fit: cover llena el área de 100% x 220px sin deformar la foto
+   (recorta lo que sobra: en Petra, que es vertical, se pierde arriba y abajo). */
+.maravilla img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Pasos 33-34 · Etiqueta de continente sobre la foto.
+   .maravilla-imagen es el antecesor posicionado (relative, sin desplazarse)
+   y .continente sale del flujo (absolute) para ubicarse en la esquina. */
+.maravilla-imagen {
+  position: relative;
+}
+
+.continente {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+  padding: 0.25rem 0.75rem;
+  color: var(--color-superficie);
+  background-color: var(--color-acento);
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Paso 25 · Contenido de la tarjeta
+   Paso 26 · También es columna flexible y crece (flex-grow: 1) para
+   ocupar el alto sobrante de la tarjeta. */
+.maravilla-contenido {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.25rem;
+}
+
+.ubicacion {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--color-acento);
+}
+
+.maravilla h3 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 1.35rem;
+}
+
+.maravilla-contenido a {
+  font-weight: bold;
+
+  /* Paso 26 · margin-top: auto absorbe todo el espacio libre vertical y
+     empuja el enlace al fondo: los enlaces de una fila quedan alineados.
+     La guía escribe align-items aquí, pero esa propiedad va en el
+     CONTENEDOR; para un solo hijo flex se usa align-self. Evita que el
+     enlace se estire a todo el ancho de la tarjeta. */
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ---------- Botón volver arriba ---------- */
+
+/* Pasos 38-39 · position: fixed lo saca del flujo y lo ancla a la ventana,
+   no a la página: no se mueve cuando haces scroll. */
+.volver-arriba {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 20;                      /* por encima del encabezado (10) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  color: var(--color-superficie);
+  background-color: var(--color-acento);
+  border: 2px solid var(--color-superficie);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* ---------- Sección histórica y pie ---------- */
+
+/* Paso 40 */
+.seccion-historia {
+  padding: 3rem 0;
+  background-color: var(--color-fondo-secundario);
+}
+
+.historia-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.historia-contenido > * {
+  flex: 1 1 300px;                  /* los hijos directos crecen, se reducen y parten de 300px */
+}
+
+/* Paso 41 · el relleno inferior de 5rem deja espacio para que el botón
+   fijo no tape el texto del pie. */
+.pie-pagina {
+  padding: 2rem 0 5rem;
+  color: var(--color-superficie);
+  background-color: var(--color-principal);
+}

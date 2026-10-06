@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guía 3 | Desarrollo Web I</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        :root {
+            --azul: #163a5f;
+            --azul-oscuro: #0c2742;
+            --azul-claro: #eaf2f8;
+            --celeste: #4f8fc0;
+            --blanco: #ffffff;
+            --gris: #66717d;
+            --fondo: #f4f7fa;
+            --borde: #dce5ec;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--fondo);
+            color: var(--azul-oscuro);
+            line-height: 1.6;
+        }
+
+
+        /* ENCABEZADO */
+
+        header {
+            background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+            color: var(--blanco);
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+
+        header .etiqueta {
+            display: inline-block;
+            padding: 7px 15px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255,255,255,.35);
+            border-radius: 30px;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+        header h1 {
+            font-size: clamp(2.4rem, 6vw, 4.5rem);
+            line-height: 1;
+            margin-bottom: 18px;
+        }
+
+
+        header p {
+            max-width: 650px;
+            margin: auto;
+            color: #d9e7f2;
+            font-size: 1.05rem;
+        }
+
+
+        /* CONTENIDO */
+
+        main {
+            width: min(1100px, 90%);
+            margin: 60px auto;
+        }
+
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+
+        .titulo-seccion span {
+            color: var(--celeste);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+
+        .titulo-seccion h2 {
+            font-size: 2rem;
+            margin-top: 5px;
+        }
+
+
+        /* TARJETAS */
+
+        .grid-trabajos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+
+        .tarjeta {
+            background: var(--blanco);
+            border: 1px solid var(--borde);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform .2s, box-shadow .2s;
+        }
+
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 14px 30px rgba(12, 39, 66, .10);
+        }
+
+
+        .numero {
+            display: inline-flex;
+            width: 38px;
+            height: 38px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--azul-claro);
+            color: var(--azul);
+            font-weight: bold;
+            margin-bottom: 18px;
+        }
+
+
+        .tarjeta h3 {
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+        }
+
+
+        .tarjeta p {
+            color: var(--gris);
+            margin-bottom: 22px;
+        }
+
+
+        .boton {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--azul);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background .2s;
+        }
+
+
+        .boton:hover {
+            background: var(--azul-oscuro);
+        }
+
+
+        /* RETO IA */
+
+        .reto {
+            margin-top: 60px;
+            background: linear-gradient(135deg, #064e3b, #087f5b);
+            color: white;
+            border-radius: 22px;
+            padding: 45px;
+        }
+
+
+        .reto-grid {
+            display: grid;
+            grid-template-columns: 1.3fr .7fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+
+        .reto .mini {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a7f3d0;
+            font-weight: bold;
+        }
+
+
+        .reto h2 {
+            font-size: 2.2rem;
+            line-height: 1.1;
+            margin: 8px 0 15px;
+        }
+
+
+        .reto p {
+            color: #d1fae5;
+            margin-bottom: 22px;
+        }
+
+
+        .boton-reto {
+            display: inline-block;
+            padding: 11px 20px;
+            background: white;
+            color: #065f46;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+
+        .reto-dato {
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,.25);
+            border-radius: 15px;
+            background: rgba(255,255,255,.08);
+        }
+
+
+        .reto-dato strong {
+            display: block;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+
+        /* VIDEO */
+
+        .video {
+            margin-top: 60px;
+        }
+
+
+        .video-contenedor {
+            margin-top: 25px;
+            background: #0b1724;
+            border-radius: 18px;
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .video-contenedor iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 70px;
+            padding: 30px 20px;
+            text-align: center;
+            background: var(--azul-oscuro);
+            color: #c9d7e3;
+            font-size: 14px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+
+            .grid-trabajos {
+                grid-template-columns: 1fr;
+            }
+
+
+            .reto-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .reto {
+                padding: 30px;
+            }
+
+
+            header {
+                padding: 50px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <header>
+
+        <span class="etiqueta">Desarrollo Web I</span>
+
+        <h1>Guía 3</h1>
+
+        <p>
+            Posicionamiento, visualización y maquetación de sitios web.
+            En esta página se encuentran los ejemplos, ejercicios y el
+            Reto IA desarrollados durante la guía.
+        </p>
+
+    </header>
+
+
+    <main>
+
+
+        <section>
+
+            <div class="titulo-seccion">
+
+                <span>Actividades</span>
+
+                <h2>Ejemplos y ejercicios</h2>
+
+            </div>
+
+
+            <div class="grid-trabajos">
+
+
+                <article class="tarjeta">
+
+                    <span class="numero">01</span>
+
+                    <h3>Ejemplo 1</h3>
+
+                    <p>
+                        Ejercicio práctico de maquetación y estilos desarrollado
+                        durante la guía.
+                    </p>
+
+
+                    <a href="ejemplo1/index.html" class="boton">
+                        Ver Ejemplo 1
+                    </a>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <span class="numero">02</span>
+
+                    <h3>Ejemplo 2</h3>
+
+                    <p>
+                        Ejemplo de menú lateral desplegable utilizando
+                        HTML y CSS.
+                    </p>
+
+
+                    <a href="ejemplo2/index.html" class="boton">
+                        Ver Ejemplo 2
+                    </a>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <span class="numero">03</span>
+
+                    <h3>Ejercicio – Resultado 1</h3>
+
+                    <p>
+                        Primera solución del ejercicio de superposición y
+                        posicionamiento de elementos.
+                    </p>
+
+
+                    <a href="ejercicio/ejercicio.html" class="boton">
+                        Ver Resultado 1
+                    </a>
+
+                </article>
+
+
+                <article class="tarjeta">
+
+                    <span class="numero">04</span>
+
+                    <h3>Ejercicio – Resultado 2</h3>
+
+                    <p>
+                        Segunda variante del ejercicio con un orden diferente
+                        de superposición de los elementos.
+                    </p>
+
+
+                    <a href="ejercicio/ejercicio2.html" class="boton">
+                        Ver Resultado 2
+                    </a>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RETO IA -->
+
+        <section class="reto">
+
+
+            <div class="reto-grid">
+
+
+                <div>
+
+                    <span class="mini">Reto IA · 30%</span>
+
+
+                    <h2>Rediseño web de AFP CONFIA</h2>
+
+
+                    <p>
+                        Nueva versión del sitio desarrollada con apoyo de
+                        Gemini, conservando su temática y navegación e
+                        implementando CSS Grid como parte principal de la
+                        maquetación.
+                    </p>
+
+
+                    <a href="Reto IA/index.html" class="boton-reto">
+                        Ver Reto IA
+                    </a>
+
+                </div>
+
+
+                <div class="reto-dato">
+
+                    <strong>CSS Grid</strong>
+
+                    <span>
+                        Utilizado para organizar la estructura principal
+                        y diferentes componentes del rediseño.
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- VIDEO DEL RETO IA -->
+
+        <section class="video">
+
+
+            <div class="titulo-seccion">
+
+                <span>Demostración</span>
+
+                <h2>Video del Reto IA</h2>
+
+            </div>
+
+
+            <div class="video-contenedor">
+
+                <iframe
+                    src="https://drive.google.com/file/d/1EOUg00C1zodIyFMtEVt567zxCuG6uiCb/preview"
+                    allow="autoplay"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            Guía 3 · Desarrollo Web I · 2026
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
